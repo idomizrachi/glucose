@@ -1,5 +1,5 @@
 PODS:
-  - glucose (0.1.0)
+  - glucose (0.0.1)
 
 DEPENDENCIES:
   - glucose (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  glucose: fb3dea5cf322e07a02be3cc97a2146de227a9db7
+  glucose: 08bb29403066d087c3a65303bcfce9b58638f7ea
 
 PODFILE CHECKSUM: 7afddfbf10e3476db4a843d1a43da973782811f4
 

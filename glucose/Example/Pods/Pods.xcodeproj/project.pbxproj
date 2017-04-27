@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DE1992139ED603ED3B44BCD80B8D2DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		03EF284C50DD36EB47DA91D3B199784D /* UIView+Glucose.h in Headers */ = {isa = PBXBuildFile; fileRef = C93629363704AB31F5F7DE3C5CE1BC0A /* UIView+Glucose.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08C7900FAF777C3B172355A98983178C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AE25E005002286C8AD2A3AEB652EF0 /* Foundation.framework */; };
+		1DE1992139ED603ED3B44BCD80B8D2DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AE25E005002286C8AD2A3AEB652EF0 /* Foundation.framework */; };
 		1F7ADF0D05DA1038ADF47A07D7954091 /* Pods-glucose_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 548D843D423FE8AAADC1D4CC6462D95C /* Pods-glucose_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		42E74F156A65ABF2AD33C36B084A5E82 /* glucose-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81867283AB6F0C0D3C4AF969D15B4286 /* glucose-dummy.m */; };
+		20A736326FCF0710969EDB09B08AB19A /* glucose-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81867283AB6F0C0D3C4AF969D15B4286 /* glucose-dummy.m */; };
+		2A2B818158BCD5C9B8602ADF550368CE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A5BACAEB2D40A04637B26529345DA0 /* MapKit.framework */; };
+		40924CF1798054ED4C98B9382412CB54 /* glucose-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7437B6BCF3895FDA0BD75B3123E9A749 /* glucose-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47E750B549A2F093C291F5CBC5421842 /* Pods-glucose_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90201E0CE0FE7B78FE57A97AC7AFE9B7 /* Pods-glucose_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4FDC76A785CBA8836FDC16CE1801087C /* Pods-glucose_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5309D550AF489EAE73C3490B7F40C089 /* Pods-glucose_Tests-dummy.m */; };
-		513BEF89B24ED295616539753A8189B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		631FCC8CA7A50CCBF0B2B4CF0064AD44 /* glucose-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7437B6BCF3895FDA0BD75B3123E9A749 /* glucose-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		63470235794763A828E05CA6BA82AEA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		99F3F07C1EB2376A00A4F0A7 /* IDMGlucose.h in Headers */ = {isa = PBXBuildFile; fileRef = 99F3F07A1EB2376A00A4F0A7 /* IDMGlucose.h */; };
-		99F3F0801EB237CA00A4F0A7 /* UIView+Glucose.h in Headers */ = {isa = PBXBuildFile; fileRef = 99F3F07E1EB237CA00A4F0A7 /* UIView+Glucose.h */; };
-		99F3F0811EB237CA00A4F0A7 /* UIView+Glucose.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F3F07F1EB237CA00A4F0A7 /* UIView+Glucose.m */; };
+		63470235794763A828E05CA6BA82AEA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AE25E005002286C8AD2A3AEB652EF0 /* Foundation.framework */; };
+		6EA85C42FBE6D4B3C13F2C68B75B7A8F /* UIView+Glucose.m in Sources */ = {isa = PBXBuildFile; fileRef = A28CB975ACFEBE5F5CEE9D39912CB399 /* UIView+Glucose.m */; };
+		7F840B8D20AFF298EB460E89833DAD33 /* IDMGlucose.h in Headers */ = {isa = PBXBuildFile; fileRef = C83C3A9FA1A3B0864C592A6A6E8B6B61 /* IDMGlucose.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCBEBA9B845D87FB4BC457CC2DCCC508 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F915CAD7A4DC99C94A7822844D8867 /* UIKit.framework */; };
 		E420514DC6C80113A6525CDED3D9A58A /* Pods-glucose_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67968FB0C965E7D847E43FCAA261E37A /* Pods-glucose_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +28,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 60D1C1709D3C0B756A09E0030EDF7C44;
+			remoteGlobalIDString = 7002062070D881AE21954DFE742CE6D9;
 			remoteInfo = glucose;
 		};
 /* End PBXContainerItemProxy section */
@@ -35,36 +37,38 @@
 		07A8F654CE576A2E01DB763EAA035D16 /* Pods-glucose_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-glucose_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		141572C85F59286B7C8AC66646995DA7 /* Pods-glucose_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-glucose_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		1D9B0791E435D50AEA4BE913C5842CA0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BB3E292F65908EF7901A7FA296A0D04 /* glucose.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = glucose.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB3E292F65908EF7901A7FA296A0D04 /* glucose.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = glucose.framework; path = glucose.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E7843961946D838B86DC976E5B8F93F /* Pods-glucose_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-glucose_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3845BBB46A153E0922F549D9A461D290 /* Pods_glucose_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_glucose_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3845BBB46A153E0922F549D9A461D290 /* Pods_glucose_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_glucose_Tests.framework; path = "Pods-glucose_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5309D550AF489EAE73C3490B7F40C089 /* Pods-glucose_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-glucose_Tests-dummy.m"; sourceTree = "<group>"; };
 		548D843D423FE8AAADC1D4CC6462D95C /* Pods-glucose_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-glucose_Example-umbrella.h"; sourceTree = "<group>"; };
 		578324C28D68D1EF6F8B3347BC0ED5EB /* Pods-glucose_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-glucose_Tests-resources.sh"; sourceTree = "<group>"; };
-		5E34F0998F7DD20334E6482461BA75D3 /* Pods-glucose_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-glucose_Tests.modulemap"; sourceTree = "<group>"; };
-		624D1C1F3F91B0CCCAA072ADE5C417FA /* Pods_glucose_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_glucose_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E34F0998F7DD20334E6482461BA75D3 /* Pods-glucose_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-glucose_Tests.modulemap"; sourceTree = "<group>"; };
+		624D1C1F3F91B0CCCAA072ADE5C417FA /* Pods_glucose_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_glucose_Example.framework; path = "Pods-glucose_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63AE25E005002286C8AD2A3AEB652EF0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		67968FB0C965E7D847E43FCAA261E37A /* Pods-glucose_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-glucose_Example-dummy.m"; sourceTree = "<group>"; };
 		6DF392760603299E60CA29CC902AE20A /* Pods-glucose_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-glucose_Example-resources.sh"; sourceTree = "<group>"; };
 		7437B6BCF3895FDA0BD75B3123E9A749 /* glucose-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "glucose-umbrella.h"; sourceTree = "<group>"; };
+		74F915CAD7A4DC99C94A7822844D8867 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		81867283AB6F0C0D3C4AF969D15B4286 /* glucose-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "glucose-dummy.m"; sourceTree = "<group>"; };
 		8D70FC87EEAE68C9D4806E3FACA2BB8F /* Pods-glucose_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-glucose_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		90201E0CE0FE7B78FE57A97AC7AFE9B7 /* Pods-glucose_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-glucose_Tests-umbrella.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95296684A8E2F22DC8ADCFB43B238182 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99F3F07A1EB2376A00A4F0A7 /* IDMGlucose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDMGlucose.h; sourceTree = "<group>"; };
-		99F3F07E1EB237CA00A4F0A7 /* UIView+Glucose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Glucose.h"; sourceTree = "<group>"; };
-		99F3F07F1EB237CA00A4F0A7 /* UIView+Glucose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Glucose.m"; sourceTree = "<group>"; };
 		9B12676598E30A9643EC2822C3416ACE /* Pods-glucose_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-glucose_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9C9A085083447A9F8465193D741E6F50 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A28CB975ACFEBE5F5CEE9D39912CB399 /* UIView+Glucose.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+Glucose.m"; sourceTree = "<group>"; };
 		A54FE632D714395C4BE955FC36FD6418 /* glucose-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "glucose-prefix.pch"; sourceTree = "<group>"; };
+		A5A5BACAEB2D40A04637B26529345DA0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		A729AFA801A237B44B5BA6D89BC45E62 /* Pods-glucose_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-glucose_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C1C9066BA69D4445F368F9F11E5298FE /* glucose.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = glucose.xcconfig; sourceTree = "<group>"; };
-		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C83C3A9FA1A3B0864C592A6A6E8B6B61 /* IDMGlucose.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IDMGlucose.h; sourceTree = "<group>"; };
+		C93629363704AB31F5F7DE3C5CE1BC0A /* UIView+Glucose.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+Glucose.h"; sourceTree = "<group>"; };
 		CD6ACB1C4A65EE4AA2582E5BDC6FECA2 /* Pods-glucose_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-glucose_Example-frameworks.sh"; sourceTree = "<group>"; };
 		D080F6C844128251D24CB36BF17EA822 /* Pods-glucose_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-glucose_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E61D2D499A3D64D59F9850DE881ECEE0 /* Pods-glucose_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-glucose_Example.modulemap"; sourceTree = "<group>"; };
+		E61D2D499A3D64D59F9850DE881ECEE0 /* Pods-glucose_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-glucose_Example.modulemap"; sourceTree = "<group>"; };
 		EC0B2E8410F9AD319950AC95536326DD /* Pods-glucose_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-glucose_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		F2BA8B34B958A0E62E266DE2203CB762 /* glucose.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = glucose.modulemap; sourceTree = "<group>"; };
+		F2BA8B34B958A0E62E266DE2203CB762 /* glucose.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = glucose.modulemap; sourceTree = "<group>"; };
 		F32864609A4388D49274E36668CC1795 /* Pods-glucose_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-glucose_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +81,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5DD1D14AEB4F5890B2AAF4CE8B7E7373 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08C7900FAF777C3B172355A98983178C /* Foundation.framework in Frameworks */,
+				2A2B818158BCD5C9B8602ADF550368CE /* MapKit.framework in Frameworks */,
+				DCBEBA9B845D87FB4BC457CC2DCCC508 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		96A2C1A91DA0D15914DEA43BAFC45984 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,25 +99,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFD54A78D92DBB53757D2E869EDDBE68 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				513BEF89B24ED295616539753A8189B7 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07A2ECAA824C3E38845E32894B52831F /* glucose */ = {
-			isa = PBXGroup;
-			children = (
-				9640FE303C10E88E610D8274F9238C62 /* Classes */,
-			);
-			path = glucose;
-			sourceTree = "<group>";
-		};
 		0D0006AAF5B61D052D7758AD421F935D /* Pods-glucose_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,10 +120,18 @@
 			path = "Target Support Files/Pods-glucose_Example";
 			sourceTree = "<group>";
 		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				509C922CFB50FCD3DB8A08209AD57DDE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2C94BADEF877B3E70450D8105B5E9568 /* glucose */ = {
 			isa = PBXGroup;
 			children = (
-				07A2ECAA824C3E38845E32894B52831F /* glucose */,
+				7F4B7EE2633F7D13ADEA7EBEFFD7431D /* glucose */,
 				48C097A3B020C1C91EB328DB898CDD32 /* Support Files */,
 			);
 			name = glucose;
@@ -146,10 +152,12 @@
 			path = "Example/Pods/Target Support Files/glucose";
 			sourceTree = "<group>";
 		};
-		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+		509C922CFB50FCD3DB8A08209AD57DDE /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+				63AE25E005002286C8AD2A3AEB652EF0 /* Foundation.framework */,
+				A5A5BACAEB2D40A04637B26529345DA0 /* MapKit.framework */,
+				74F915CAD7A4DC99C94A7822844D8867 /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -159,10 +167,19 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				D5E0682B70590C9E3F8E3BC4D2B0095E /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
 				E711AA905F2113D39A98F2210027E4A6 /* Products */,
 				BF087FF99DC452AE79EBE1D7B803661E /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		7F4B7EE2633F7D13ADEA7EBEFFD7431D /* glucose */ = {
+			isa = PBXGroup;
+			children = (
+				C8E1167B732680165DA9D95AB5010FFC /* Classes */,
+			);
+			name = glucose;
+			path = glucose;
 			sourceTree = "<group>";
 		};
 		8E4A4CA4FB3C07D9944C867B0DC2541B /* Pods-glucose_Tests */ = {
@@ -183,24 +200,6 @@
 			path = "Target Support Files/Pods-glucose_Tests";
 			sourceTree = "<group>";
 		};
-		9640FE303C10E88E610D8274F9238C62 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				99F3F07A1EB2376A00A4F0A7 /* IDMGlucose.h */,
-				99F3F07E1EB237CA00A4F0A7 /* UIView+Glucose.h */,
-				99F3F07F1EB237CA00A4F0A7 /* UIView+Glucose.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		BF087FF99DC452AE79EBE1D7B803661E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +207,17 @@
 				8E4A4CA4FB3C07D9944C867B0DC2541B /* Pods-glucose_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C8E1167B732680165DA9D95AB5010FFC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C83C3A9FA1A3B0864C592A6A6E8B6B61 /* IDMGlucose.h */,
+				C93629363704AB31F5F7DE3C5CE1BC0A /* UIView+Glucose.h */,
+				A28CB975ACFEBE5F5CEE9D39912CB399 /* UIView+Glucose.m */,
+			);
+			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		D5E0682B70590C9E3F8E3BC4D2B0095E /* Development Pods */ = {
@@ -231,13 +241,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4D465EE0A89439D3260CA304CB75484E /* Headers */ = {
+		5E550CBEAD36B290827F90234D97E6AB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99F3F0801EB237CA00A4F0A7 /* UIView+Glucose.h in Headers */,
-				99F3F07C1EB2376A00A4F0A7 /* IDMGlucose.h in Headers */,
-				631FCC8CA7A50CCBF0B2B4CF0064AD44 /* glucose-umbrella.h in Headers */,
+				40924CF1798054ED4C98B9382412CB54 /* glucose-umbrella.h in Headers */,
+				7F840B8D20AFF298EB460E89833DAD33 /* IDMGlucose.h in Headers */,
+				03EF284C50DD36EB47DA91D3B199784D /* UIView+Glucose.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,13 +305,13 @@
 			productReference = 624D1C1F3F91B0CCCAA072ADE5C417FA /* Pods_glucose_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		60D1C1709D3C0B756A09E0030EDF7C44 /* glucose */ = {
+		7002062070D881AE21954DFE742CE6D9 /* glucose */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E0B1DFDEB23E04608B3648AC0418A680 /* Build configuration list for PBXNativeTarget "glucose" */;
+			buildConfigurationList = C22C2FA6D6E6743ED7E02CB79D73FE0C /* Build configuration list for PBXNativeTarget "glucose" */;
 			buildPhases = (
-				B6A026997A0FA7AB391DD4C4B9D28C0F /* Sources */,
-				DFD54A78D92DBB53757D2E869EDDBE68 /* Frameworks */,
-				4D465EE0A89439D3260CA304CB75484E /* Headers */,
+				712D067220C0A65712EE495F5D102F3F /* Sources */,
+				5DD1D14AEB4F5890B2AAF4CE8B7E7373 /* Frameworks */,
+				5E550CBEAD36B290827F90234D97E6AB /* Headers */,
 			);
 			buildRules = (
 			);
@@ -333,7 +343,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				60D1C1709D3C0B756A09E0030EDF7C44 /* glucose */,
+				7002062070D881AE21954DFE742CE6D9 /* glucose */,
 				4EAE36E81E5E37D7489208EA71921B52 /* Pods-glucose_Example */,
 				2AA19F38E62BE781B3709ABF112B9545 /* Pods-glucose_Tests */,
 			);
@@ -349,20 +359,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		712D067220C0A65712EE495F5D102F3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20A736326FCF0710969EDB09B08AB19A /* glucose-dummy.m in Sources */,
+				6EA85C42FBE6D4B3C13F2C68B75B7A8F /* UIView+Glucose.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		981141AE92A5729D6D92F76BC1B13FD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E420514DC6C80113A6525CDED3D9A58A /* Pods-glucose_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B6A026997A0FA7AB391DD4C4B9D28C0F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				42E74F156A65ABF2AD33C36B084A5E82 /* glucose-dummy.m in Sources */,
-				99F3F0811EB237CA00A4F0A7 /* UIView+Glucose.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,41 +382,12 @@
 		2E4ABFF236D990E846680140572D06FF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = glucose;
-			target = 60D1C1709D3C0B756A09E0030EDF7C44 /* glucose */;
+			target = 7002062070D881AE21954DFE742CE6D9 /* glucose */;
 			targetProxy = C43FEC76CBCFCA9C7D450AC856A6260B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		06A756138931C1961DB90C28F32AD137 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1C9066BA69D4445F368F9F11E5298FE /* glucose.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/glucose/glucose-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/glucose/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/glucose/glucose.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = glucose;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -445,6 +426,35 @@
 			};
 			name = Release;
 		};
+		3F229ED80E624DB7B4FC175F724EBACB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1C9066BA69D4445F368F9F11E5298FE /* glucose.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/glucose/glucose-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/glucose/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/glucose/glucose.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = glucose;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		404E82AE19B68A8948EAD4942DDB4444 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 07A8F654CE576A2E01DB763EAA035D16 /* Pods-glucose_Tests.debug.xcconfig */;
@@ -478,6 +488,35 @@
 			};
 			name = Debug;
 		};
+		7ECAF26D19DCE3E65CA35DDAB70C6E44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1C9066BA69D4445F368F9F11E5298FE /* glucose.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/glucose/glucose-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/glucose/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/glucose/glucose.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = glucose;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		AA7C9236E63D99F275A40CD82C769E3D /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D080F6C844128251D24CB36BF17EA822 /* Pods-glucose_Tests.release.xcconfig */;
@@ -503,35 +542,6 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_glucose_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		BB727DFC4C40043D4F80949743209781 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1C9066BA69D4445F368F9F11E5298FE /* glucose.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/glucose/glucose-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/glucose/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/glucose/glucose.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = glucose;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -669,11 +679,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E0B1DFDEB23E04608B3648AC0418A680 /* Build configuration list for PBXNativeTarget "glucose" */ = {
+		C22C2FA6D6E6743ED7E02CB79D73FE0C /* Build configuration list for PBXNativeTarget "glucose" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				06A756138931C1961DB90C28F32AD137 /* Debug */,
-				BB727DFC4C40043D4F80949743209781 /* Release */,
+				3F229ED80E624DB7B4FC175F724EBACB /* Debug */,
+				7ECAF26D19DCE3E65CA35DDAB70C6E44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

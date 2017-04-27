@@ -57,7 +57,7 @@ typedef NS_ENUM(NSUInteger, IDMConstraintRelation) {
 //-(NSArray<NSLayoutConstraint *> *)heightToView:(UIView *)view;
 //-(NSArray<NSLayoutConstraint *> *)heightToView:(UIView *)view multiplier:(CGFloat)multiplier offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 //
-//-(NSArray<NSLayoutConstraint *> *)heightWithMin:(CGFloat)min priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+-(NSArray<NSLayoutConstraint *> *)heightWithMin:(CGFloat)min priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 //-(NSArray<NSLayoutConstraint *> *)heightWithMax:(CGFloat)max priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 //-(NSArray<NSLayoutConstraint *> *)heightBetweenMin:(CGFloat)min andMax:(CGFloat)max priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 //
@@ -70,13 +70,13 @@ typedef NS_ENUM(NSUInteger, IDMConstraintRelation) {
 //-(NSArray<NSLayoutConstraint *> *)rightToLeftOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 //-(NSArray<NSLayoutConstraint *> *)rightToRightOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 //
-//-(NSArray<NSLayoutConstraint *> *)topToBottom:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
-//
-//-(NSArray<NSLayoutConstraint *> *)topToTop:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+
+-(NSArray<NSLayoutConstraint *> *)topToTopOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+-(NSArray<NSLayoutConstraint *> *)topToBottomOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 //
 //-(NSArray<NSLayoutConstraint *> *)bottomToTop:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 //
-//-(NSArray<NSLayoutConstraint *> *)bottomToBottom:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+-(NSArray<NSLayoutConstraint *> *)bottomToBottomOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 
 
 @end
