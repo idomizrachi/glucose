@@ -1,0 +1,16 @@
+PODS:
+  - glucose (0.1.0)
+
+DEPENDENCIES:
+  - glucose (from `../`)
+
+EXTERNAL SOURCES:
+  glucose:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  glucose: fb3dea5cf322e07a02be3cc97a2146de227a9db7
+
+PODFILE CHECKSUM: 7afddfbf10e3476db4a843d1a43da973782811f4
+
+COCOAPODS: 1.0.0

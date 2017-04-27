@@ -1,0 +1,22 @@
+{
+  "name": "glucose",
+  "version": "0.1.0",
+  "summary": "A short description of glucose.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/idomizrachi/glucose",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "idomizrachi": "ido.mizrachi@jivesoftware.com"
+  },
+  "source": {
+    "git": "https://github.com/idomizrachi/glucose.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "glucose/Classes/**/*"
+}

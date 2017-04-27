@@ -1,0 +1,6 @@
+framework module Pods_glucose_Example {
+  umbrella header "Pods-glucose_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
