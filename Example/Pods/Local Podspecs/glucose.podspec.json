@@ -19,6 +19,6 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "Classes/**/*",
+  "source_files": "glucose/Classes/**/*",
   "frameworks": "UIKit"
 }
