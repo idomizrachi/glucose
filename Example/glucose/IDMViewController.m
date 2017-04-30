@@ -20,12 +20,15 @@
 @property (nonatomic, strong) UIView *squareView;
 @property (nonatomic, strong) UIView *squareView2;
 
+@property (nonatomic, strong) UIView *backgroundView;
+
 @end
 
 @implementation IDMViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view addSubview: self.backgroundView];
     [self.view addSubview: self.titleLabel];
     [self.view addSubview: self.footerLabel];
     [self.view addSubview: self.leftLabel];
@@ -33,8 +36,12 @@
     [self.view addSubview: self.squareView];
     [self.view addSubview: self.squareView2];
     
+    
+    [self.backgroundView edgesToView:self.view];
+    
     [self.titleLabel centerXInView: self.view];
     [self.titleLabel topToTopOfView:self.view offset:20.0f priority:UILayoutPriorityRequired isActive:YES];
+    [self.titleLabel setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
     
     [self.footerLabel bottomToBottomOfView:self.view offset:20.0f priority:UILayoutPriorityRequired isActive:YES];
     [self.footerLabel widthEqualToView:self.view];
@@ -61,6 +68,13 @@
     
 }
 
+-(UIView *)backgroundView {
+    if (! _backgroundView) {
+        _backgroundView = [[UIView alloc] init];
+        _backgroundView.backgroundColor = [UIColor colorWithWhite:0.9f alpha:1.0f];
+    }
+    return _backgroundView;
+}
 
 -(UILabel *)titleLabel {
     if (! _titleLabel) {

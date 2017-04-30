@@ -64,10 +64,10 @@
 -(NSArray<NSLayoutConstraint *> *)edgesToView:(UIView *)view edgeInsets:(UIEdgeInsets)edgeInsets priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
     self.translatesAutoresizingMaskIntoConstraints = NO;
     NSMutableArray<NSLayoutConstraint *> *constraints = [NSMutableArray new];
-    [constraints addObject:[view.topAnchor constraintEqualToAnchor:view.topAnchor constant:edgeInsets.top]];
-    [constraints addObject:[view.leadingAnchor constraintEqualToAnchor:view.leadingAnchor constant:edgeInsets.left]];
-    [constraints addObject:[view.bottomAnchor constraintEqualToAnchor:view.bottomAnchor constant:edgeInsets.bottom]];
-    [constraints addObject:[view.topAnchor constraintEqualToAnchor:view.topAnchor constant:edgeInsets.right]];
+    [constraints addObject:[self.topAnchor constraintEqualToAnchor:view.topAnchor constant:edgeInsets.top]];
+    [constraints addObject:[self.leadingAnchor constraintEqualToAnchor:view.leadingAnchor constant:edgeInsets.left]];
+    [constraints addObject:[self.bottomAnchor constraintEqualToAnchor:view.bottomAnchor constant:edgeInsets.bottom]];
+    [constraints addObject:[self.trailingAnchor constraintEqualToAnchor:view.trailingAnchor constant:edgeInsets.right]];
     [self.class updateConstraints:constraints priority:priority isActive:isActive];
     return [constraints copy];
 }
