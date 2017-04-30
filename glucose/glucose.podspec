@@ -26,7 +26,7 @@ The implementation was highly inspired by TinyConstraints.
   s.license          = { :type => 'Apache', :file => 'LICENSE' }
   s.author           = { 'idomizrachi' => 'ido.mizrachi@jivesoftware.com' }
   s.source           = { :git => 'https://github.com/idomizrachi/glucose.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/idomizrachi'
 
   s.ios.deployment_target = '8.0'
 
