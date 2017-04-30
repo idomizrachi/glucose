@@ -32,5 +32,5 @@ The implementation was highly inspired by TinyConstraints.
 
   s.source_files = 'glucose/Classes/**/*'
   s.public_header_files = 'glucose/Classes/**/*.h'
-  s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit'
 end
