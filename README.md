@@ -40,7 +40,9 @@ CocoaPods
 
 Glucose is available through CocoaPods. To install it, simply add the following line to your Podfile:
 
+```Rubu
 pod "glucose"
+```
 
 ## Thanks
 Glucose is inspired by [TinyConstraints](https://github.com/roberthein/TinyConstraints).
