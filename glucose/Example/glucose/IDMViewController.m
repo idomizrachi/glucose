@@ -17,6 +17,9 @@
 @property (nonatomic, strong) UILabel *leftLabel;
 @property (nonatomic, strong) UILabel *rightLabel;
 
+@property (nonatomic, strong) UIView *squareView;
+@property (nonatomic, strong) UIView *squareView2;
+
 @end
 
 @implementation IDMViewController
@@ -27,23 +30,34 @@
     [self.view addSubview: self.footerLabel];
     [self.view addSubview: self.leftLabel];
     [self.view addSubview: self.rightLabel];
+    [self.view addSubview: self.squareView];
+    [self.view addSubview: self.squareView2];
     
     [self.titleLabel centerXInView: self.view];
     [self.titleLabel topToTopOfView:self.view offset:20.0f priority:UILayoutPriorityRequired isActive:YES];
     
     [self.footerLabel bottomToBottomOfView:self.view offset:20.0f priority:UILayoutPriorityRequired isActive:YES];
-    [self.footerLabel widthToView:self.view];
+    [self.footerLabel widthEqualToView:self.view];
     [self.footerLabel heightWithMin:44.0f priority:UILayoutPriorityRequired isActive:YES];
     
     [self.leftLabel topToBottomOfView:self.titleLabel offset:20.0f priority:UILayoutPriorityRequired isActive:YES];
     [self.rightLabel topToBottomOfView:self.titleLabel offset:20.0f priority:UILayoutPriorityRequired isActive:YES];
+    [self.leftLabel widthEqualToView:self.rightLabel];
     
-    [self.leftLabel widthToView:self.rightLabel multiplier:1.0f offset:0 relation:IDMConstraintRelationEqual priority:UILayoutPriorityRequired isActive:YES];
+    [self.leftLabel leadingToLeadingOfView:self.view offset:20.0f priority:UILayoutPriorityRequired isActive:YES];
+    [self.rightLabel trailingToTrailingOfView:self.view offset:20.0f priority:UILayoutPriorityRequired isActive:YES];
+    [self.rightLabel leadingToTrailingOfView:self.leftLabel offset:20.0f priority:UILayoutPriorityRequired isActive:YES];
     
-    [[self.leftLabel.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor] setActive:YES];
-    [[self.rightLabel.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor] setActive:YES];
-    [[self.leftLabel.trailingAnchor constraintEqualToAnchor:self.rightLabel.leadingAnchor constant:20.0f] setActive:YES];
+    [self.squareView width:45.0f];
+    [self.squareView height: 45.0f];
+    [self.squareView topToBottomOfView:self.leftLabel offset:20.0f priority:UILayoutPriorityRequired isActive:YES];
+    [self.squareView centerInView:self.view];
+    
+    [self.squareView2 bottomToTopOfView:self.footerLabel offset:30.0f priority:UILayoutPriorityRequired isActive:YES];
+    
+    
 }
+
 
 -(UILabel *)titleLabel {
     if (! _titleLabel) {
@@ -88,6 +102,22 @@
         _rightLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _rightLabel;
+}
+
+-(UIView *)squareView {
+    if (! _squareView) {
+        _squareView = [[UIView alloc] init];
+        _squareView.backgroundColor = [UIColor yellowColor];
+    }
+    return _squareView;
+}
+
+-(UIView *)squareView2 {
+    if (! _squareView2) {
+        _squareView2 = [[UIView alloc] init];
+        _squareView2.backgroundColor = [UIColor blueColor];
+    }
+    return _squareView2;
 }
 
 

@@ -139,7 +139,7 @@
     return [constraints copy];
 }
 
--(NSArray<NSLayoutConstraint *> *)widthToView:(UIView *)view {
+-(NSArray<NSLayoutConstraint *> *)widthEqualToView:(UIView *)view {
     return [self widthToView:view multiplier:1.0f offset:0.0f relation:IDMConstraintRelationEqual priority:UILayoutPriorityRequired isActive:YES];
 }
 
@@ -191,6 +191,66 @@
     return [constraints copy];
 }
 
+
+-(NSArray<NSLayoutConstraint *> *)height:(CGFloat)height {
+    return [self height:height relation:IDMConstraintRelationEqual];
+}
+-(NSArray<NSLayoutConstraint *> *)height:(CGFloat)height relation:(IDMConstraintRelation)relation {
+    return [self height:height relation:relation priority:UILayoutPriorityRequired];
+}
+-(NSArray<NSLayoutConstraint *> *)height:(CGFloat)height relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority {
+    return [self height:height relation:relation priority:priority isActive:YES];
+}
+-(NSArray<NSLayoutConstraint *> *)height:(CGFloat)height relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    NSMutableArray<NSLayoutConstraint *> *constraints = [NSMutableArray new];
+    switch (relation) {
+        case IDMConstraintRelationEqual: {
+            [constraints addObject:[self.heightAnchor constraintEqualToConstant:height]];
+            break;
+        }
+        case IDMConstraintRelationEqualOrLess: {
+            [constraints addObject:[self.heightAnchor constraintLessThanOrEqualToConstant:height]];
+            break;
+        }
+        case IDMConstraintRelationEqualOrGreater: {
+            [constraints addObject:[self.heightAnchor constraintGreaterThanOrEqualToConstant:height]];
+            break;
+        }
+    }
+    [self.class updateConstraints:constraints priority:priority isActive:isActive];
+    return [constraints copy];
+}
+
+
+
+-(NSArray<NSLayoutConstraint *> *)heightEqualToView:(UIView *)view {
+    return [self heightToView:view multiplier:1.0f offset:0.0f relation:IDMConstraintRelationEqual priority:UILayoutPriorityRequired isActive:YES];
+}
+
+-(NSArray<NSLayoutConstraint *> *)heightToView:(UIView *)view multiplier:(CGFloat)multiplier offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    NSMutableArray<NSLayoutConstraint *> *constraints = [NSMutableArray new];
+    switch (relation) {
+        case IDMConstraintRelationEqual: {
+            [constraints addObject: [self.heightAnchor constraintEqualToAnchor:view.heightAnchor multiplier:multiplier constant:offset]];
+            break;
+        }
+        case IDMConstraintRelationEqualOrLess: {
+            [constraints addObject: [self.heightAnchor constraintLessThanOrEqualToAnchor:view.heightAnchor multiplier:multiplier constant:offset]];
+            break;
+        }
+        case IDMConstraintRelationEqualOrGreater: {
+            [constraints addObject: [self.heightAnchor constraintGreaterThanOrEqualToAnchor:view.heightAnchor multiplier:multiplier constant:offset]];
+            break;
+        }
+        default:
+            break;
+    }
+    [self.class updateConstraints:constraints priority:priority isActive:isActive];
+    return [constraints copy];
+}
+
 -(NSArray<NSLayoutConstraint *> *)heightWithMin:(CGFloat)min priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
     self.translatesAutoresizingMaskIntoConstraints = NO;
     NSMutableArray<NSLayoutConstraint *> *constraints = [NSMutableArray new];
@@ -200,6 +260,50 @@
 }
 
 
+-(NSArray<NSLayoutConstraint *> *)heightWithMax:(CGFloat)max priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    NSMutableArray<NSLayoutConstraint *> *constraints = [NSMutableArray new];
+    [constraints addObject: [self.heightAnchor constraintLessThanOrEqualToConstant:max]];
+    [self.class updateConstraints:constraints priority:priority isActive:isActive];
+    return [constraints copy];
+}
+
+-(NSArray<NSLayoutConstraint *> *)heightBetweenMin:(CGFloat)min andMax:(CGFloat)max priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    NSMutableArray<NSLayoutConstraint *> *constraints = [NSMutableArray new];
+    [constraints addObjectsFromArray: [self heightWithMin:min priority:priority isActive:isActive]];
+    [constraints addObjectsFromArray: [self heightWithMax:max priority:priority isActive:isActive]];
+    [self.class updateConstraints:constraints priority:priority isActive:isActive];
+    return [constraints copy];
+}
+
+
+
+
+-(NSArray<NSLayoutConstraint *> *)leadingToTrailingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    NSMutableArray<NSLayoutConstraint *> *constraints = [NSMutableArray new];
+    [constraints addObject:[self.leadingAnchor constraintEqualToAnchor:view.trailingAnchor constant:offset]];
+    [self.class updateConstraints:constraints priority:priority isActive:isActive];
+    return constraints;
+}
+
+-(NSArray<NSLayoutConstraint *> *)leadingToLeadingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    NSMutableArray<NSLayoutConstraint *> *constraints = [NSMutableArray new];
+    [constraints addObject:[self.leadingAnchor constraintEqualToAnchor:view.leadingAnchor constant:offset]];
+    [self.class updateConstraints:constraints priority:priority isActive:isActive];
+    return constraints;
+}
+
+-(NSArray<NSLayoutConstraint *> *)trailingToTrailingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    NSMutableArray<NSLayoutConstraint *> *constraints = [NSMutableArray new];
+    [constraints addObject:[self.trailingAnchor constraintEqualToAnchor:view.trailingAnchor constant:-offset]];
+    [self.class updateConstraints:constraints priority:priority isActive:isActive];
+    return constraints;
+}
+
 -(NSArray<NSLayoutConstraint *> *)topToTopOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
     self.translatesAutoresizingMaskIntoConstraints = NO;
     NSMutableArray<NSLayoutConstraint *> *constraints = [NSMutableArray new];
@@ -208,7 +312,7 @@
     return [constraints copy];
 }
 
--(NSArray<NSLayoutConstraint *> *)topToBottomOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive; {
+-(NSArray<NSLayoutConstraint *> *)topToBottomOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
     self.translatesAutoresizingMaskIntoConstraints = NO;
     NSMutableArray<NSLayoutConstraint *> *constraints = [NSMutableArray new];
     [constraints addObject: [self.topAnchor constraintEqualToAnchor:view.bottomAnchor constant:offset]];
@@ -223,6 +327,15 @@
     [self.class updateConstraints:constraints priority:priority isActive:isActive];
     return [constraints copy];
 }
+
+-(NSArray<NSLayoutConstraint *> *)bottomToTopOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    NSMutableArray<NSLayoutConstraint *> *constraints = [NSMutableArray new];
+    [constraints addObject: [self.bottomAnchor constraintEqualToAnchor:view.topAnchor constant:-offset]];
+    [self.class updateConstraints:constraints priority:priority isActive:isActive];
+    return [constraints copy];
+}
+
 
 #pragma mark - Private
 

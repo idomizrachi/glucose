@@ -45,7 +45,7 @@ typedef NS_ENUM(NSUInteger, IDMConstraintRelation) {
 -(NSArray<NSLayoutConstraint *> *)width:(CGFloat)width relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority;
 -(NSArray<NSLayoutConstraint *> *)width:(CGFloat)width relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 
--(NSArray<NSLayoutConstraint *> *)widthToView:(UIView *)view;
+-(NSArray<NSLayoutConstraint *> *)widthEqualToView:(UIView *)view;
 -(NSArray<NSLayoutConstraint *> *)widthToView:(UIView *)view multiplier:(CGFloat)multiplier offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 
 
@@ -53,19 +53,20 @@ typedef NS_ENUM(NSUInteger, IDMConstraintRelation) {
 -(NSArray<NSLayoutConstraint *> *)widthWithMax:(CGFloat)max priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 -(NSArray<NSLayoutConstraint *> *)widthBetweenMin:(CGFloat)min andMax:(CGFloat)max priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 
-//TODO: Missing Implementation
-//-(NSArray<NSLayoutConstraint *> *)heightToView:(UIView *)view;
-//-(NSArray<NSLayoutConstraint *> *)heightToView:(UIView *)view multiplier:(CGFloat)multiplier offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
-//
+-(NSArray<NSLayoutConstraint *> *)height:(CGFloat)height;
+-(NSArray<NSLayoutConstraint *> *)height:(CGFloat)height relation:(IDMConstraintRelation)relation;
+-(NSArray<NSLayoutConstraint *> *)height:(CGFloat)height relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority;
+-(NSArray<NSLayoutConstraint *> *)height:(CGFloat)height relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+-(NSArray<NSLayoutConstraint *> *)heightEqualToView:(UIView *)view;
+-(NSArray<NSLayoutConstraint *> *)heightToView:(UIView *)view multiplier:(CGFloat)multiplier offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 -(NSArray<NSLayoutConstraint *> *)heightWithMin:(CGFloat)min priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
-//-(NSArray<NSLayoutConstraint *> *)heightWithMax:(CGFloat)max priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
-//-(NSArray<NSLayoutConstraint *> *)heightBetweenMin:(CGFloat)min andMax:(CGFloat)max priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
-//
-//-(NSArray<NSLayoutConstraint *> *)leadingToTrailingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
-//
-//-(NSArray<NSLayoutConstraint *> *)leadingToLeadingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+-(NSArray<NSLayoutConstraint *> *)heightWithMax:(CGFloat)max priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+-(NSArray<NSLayoutConstraint *> *)heightBetweenMin:(CGFloat)min andMax:(CGFloat)max priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+
+-(NSArray<NSLayoutConstraint *> *)leadingToTrailingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+-(NSArray<NSLayoutConstraint *> *)leadingToLeadingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 //-(NSArray<NSLayoutConstraint *> *)trailingToLeadingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
-//-(NSArray<NSLayoutConstraint *> *)trailingToTrailingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+-(NSArray<NSLayoutConstraint *> *)trailingToTrailingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 //
 //-(NSArray<NSLayoutConstraint *> *)rightToLeftOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 //-(NSArray<NSLayoutConstraint *> *)rightToRightOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
@@ -73,8 +74,7 @@ typedef NS_ENUM(NSUInteger, IDMConstraintRelation) {
 
 -(NSArray<NSLayoutConstraint *> *)topToTopOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 -(NSArray<NSLayoutConstraint *> *)topToBottomOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
-//
-//-(NSArray<NSLayoutConstraint *> *)bottomToTop:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+-(NSArray<NSLayoutConstraint *> *)bottomToTopOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 //
 -(NSArray<NSLayoutConstraint *> *)bottomToBottomOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 
