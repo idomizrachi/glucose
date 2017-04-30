@@ -1,5 +1,6 @@
 # glucose
-Glucose is a set of syntactic sugar methods for AutoLayout.
+## Overview
+Glucose is a set of syntactic sugar methods for AutoLayout. 
 
 The following code sample:
 ```Objective-C
@@ -29,12 +30,19 @@ The following code sample:
     [self.squareView2 bottomToTopOfView:self.footerLabel offset:30.0f priority:UILayoutPriorityRequired isActive:YES];
 ```
 Generates this UI:
+
 ![alt text](https://github.com/idomizrachi/glucose/blob/master/Screenshots/Sample.png?raw=true "Sample App")
 
-See the Example project for more.
+See the Example project for the complete implementation.
 
+## Installation
+CocoaPods
 
+Glucose is available through CocoaPods. To install it, simply add the following line to your Podfile:
 
+pod "glucose"
+
+## Thanks
 Glucose is inspired by [TinyConstraints](https://github.com/roberthein/TinyConstraints).
 
 
