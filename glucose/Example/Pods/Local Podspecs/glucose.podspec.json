@@ -15,13 +15,11 @@
     "git": "https://github.com/idomizrachi/glucose.git",
     "tag": "0.0.1"
   },
+  "social_media_url": "https://twitter.com/idomizrachi",
   "platforms": {
     "ios": "8.0"
   },
   "source_files": "glucose/Classes/**/*",
   "public_header_files": "glucose/Classes/**/*.h",
-  "frameworks": [
-    "UIKit",
-    "MapKit"
-  ]
+  "frameworks": "UIKit"
 }
