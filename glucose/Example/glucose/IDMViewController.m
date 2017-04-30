@@ -53,6 +53,9 @@
     [self.squareView topToBottomOfView:self.leftLabel offset:20.0f priority:UILayoutPriorityRequired isActive:YES];
     [self.squareView centerInView:self.view];
     
+    [self.squareView2 width: 30.0f];
+    [self.squareView2 height:30.0f];
+    [self.squareView2 leadingToLeadingOfView:self.view offset:20.0f priority:UILayoutPriorityRequired isActive:YES];
     [self.squareView2 bottomToTopOfView:self.footerLabel offset:30.0f priority:UILayoutPriorityRequired isActive:YES];
     
     
@@ -107,7 +110,7 @@
 -(UIView *)squareView {
     if (! _squareView) {
         _squareView = [[UIView alloc] init];
-        _squareView.backgroundColor = [UIColor yellowColor];
+        _squareView.backgroundColor = [UIColor redColor];
     }
     return _squareView;
 }
