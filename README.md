@@ -1,6 +1,6 @@
 # glucose
 ## Overview
-Glucose is a set of syntactic sugar methods for AutoLayout. 
+glucose is a set of syntactic sugar methods for AutoLayout. 
 
 The following code sample:
 ```Objective-C
