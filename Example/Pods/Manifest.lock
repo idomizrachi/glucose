@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  glucose: 60c15abd2380eb37d889160f8b4389c5a993fe23
+  glucose: f5a8d93ae4b1e0ecd087c610517279cea6ea6beb
 
 PODFILE CHECKSUM: 7afddfbf10e3476db4a843d1a43da973782811f4
 

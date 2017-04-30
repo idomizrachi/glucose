@@ -30,7 +30,7 @@ The implementation was highly inspired by TinyConstraints.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Classes/**/*'
-  #s.public_header_files = 'Classes/**/*.h'
+  s.source_files = 'glucose/Classes/**/*'
+  #s.public_header_files = 'glucose/Classes/**/*.h'
   s.frameworks = 'UIKit'
 end

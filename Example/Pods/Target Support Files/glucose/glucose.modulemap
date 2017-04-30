@@ -1,6 +1,0 @@
-framework module glucose {
-  umbrella header "glucose-umbrella.h"
-
-  export *
-  module * { export * }
-}
