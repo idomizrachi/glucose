@@ -334,7 +334,7 @@
     return [self trailingToLeadingOfView:view offset:0.0f];
 }
 -(NSLayoutConstraint *)trailingToLeadingOfView:(UIView *)view offset:(CGFloat)offset {
-    return [self trailingToTrailingOfView:view offset:offset priority:UILayoutPriorityRequired];
+    return [self trailingToLeadingOfView:view offset:offset priority:UILayoutPriorityRequired];
 }
 -(NSLayoutConstraint *)trailingToLeadingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority {
     return [self trailingToLeadingOfView:view offset:offset priority:priority isActive:YES];

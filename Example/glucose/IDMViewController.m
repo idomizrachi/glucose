@@ -19,6 +19,7 @@
 
 @property (nonatomic, strong) UIView *squareView;
 @property (nonatomic, strong) UIView *squareView2;
+@property (nonatomic, strong) UIView *squareView3;
 
 @property (nonatomic, strong) UIView *backgroundView;
 
@@ -35,6 +36,7 @@
     [self.view addSubview: self.rightLabel];
     [self.view addSubview: self.squareView];
     [self.view addSubview: self.squareView2];
+    [self.view addSubview: self.squareView3];
     
     
     [self.backgroundView edgesToView:self.view];
@@ -54,15 +56,19 @@
     [self.rightLabel trailingToTrailingOfView:self.view offset:20.0f];
     [self.rightLabel leadingToTrailingOfView:self.leftLabel offset:20.0f];
     
-    [self.squareView width:45.0f];
-    [self.squareView height: 45.0f];
+    [self.squareView size:CGSizeMake(45.0f, 45.0f)];
     [self.squareView topToBottomOfView:self.leftLabel offset:20.0f];
     [self.squareView centerInView:self.view];
     
     [self.squareView2 width: 30.0f];
     [self.squareView2 height:30.0f];
     [self.squareView2 leadingToLeadingOfView:self.view offset:20.0f];
-    [self.squareView2 bottomToTopOfView:self.footerLabel offset:30.0f];    
+    [self.squareView2 bottomToTopOfView:self.footerLabel offset:30.0f];
+    
+    [self.squareView3 leadingToLeadingOfView:self.view offset:20.0f];
+    [self.squareView3 topToBottomOfView:self.squareView offset:15.0f];
+    [self.squareView3 trailingToLeadingOfView:self.rightLabel offset:0.0f];
+    [self.squareView3 height: 45.0f];
 }
 
 -(UIView *)backgroundView {
@@ -132,6 +138,14 @@
         _squareView2.backgroundColor = [UIColor blueColor];
     }
     return _squareView2;
+}
+
+-(UIView *)squareView3 {
+    if (! _squareView3) {
+        _squareView3 = [[UIView alloc] init];
+        _squareView3.backgroundColor = [UIColor purpleColor];
+    }
+    return _squareView3;
 }
 
 
