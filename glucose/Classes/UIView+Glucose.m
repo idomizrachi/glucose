@@ -259,7 +259,7 @@
     return constraint;
 }
 -(NSLayoutConstraint *)heightWithMax:(CGFloat)max {
-    return [self heightWithMin:max priority:UILayoutPriorityRequired];
+    return [self heightWithMax:max priority:UILayoutPriorityRequired];
 }
 -(NSLayoutConstraint *)heightWithMax:(CGFloat)max priority:(UILayoutPriority)priority {
     return [self heightWithMax:max priority:priority isActive:YES];
