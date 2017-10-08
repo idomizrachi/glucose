@@ -416,17 +416,17 @@
     return constraint;
 }
 
-#pragma mark - Last Baseline to last baseline
--(NSLayoutConstraint *)baselineToBaselineOfView:(UIView *)view {
-    return [self baselineToBaselineOfView:view offset:0.0f];
+#pragma mark - Bottom baseline to bottom baseline
+-(NSLayoutConstraint *)bottomBaselineToBottomBaselineOfView:(UIView *)view {
+    return [self bottomBaselineToBottomBaselineOfView:view offset:0.0f];
 }
--(NSLayoutConstraint *)baselineToBaselineOfView:(UIView *)view offset:(CGFloat)offset {
-    return [self baselineToBaselineOfView:view offset:offset priority:UILayoutPriorityRequired];
+-(NSLayoutConstraint *)bottomBaselineToBottomBaselineOfView:(UIView *)view offset:(CGFloat)offset {
+    return [self bottomBaselineToBottomBaselineOfView:view offset:offset priority:UILayoutPriorityRequired];
 }
--(NSLayoutConstraint *)baselineToBaselineOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority {
-    return [self baselineToBaselineOfView:view offset:offset priority:priority isActive:YES];
+-(NSLayoutConstraint *)bottomBaselineToBottomBaselineOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority {
+    return [self bottomBaselineToBottomBaselineOfView:view offset:offset priority:priority isActive:YES];
 }
--(NSLayoutConstraint *)baselineToBaselineOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
+-(NSLayoutConstraint *)bottomBaselineToBottomBaselineOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
     self.translatesAutoresizingMaskIntoConstraints = NO;
     NSLayoutConstraint *constraint = [self.lastBaselineAnchor constraintEqualToAnchor:view.lastBaselineAnchor constant:-offset];
     [self.class updateConstraint:constraint priority:priority isActive:isActive];
