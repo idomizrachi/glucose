@@ -123,4 +123,11 @@ typedef NS_ENUM(NSUInteger, IDMConstraintRelation) {
 -(NSLayoutConstraint *)bottomToTopOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority;
 -(NSLayoutConstraint *)bottomToTopOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 
+#pragma mark - Last Baseline to last baseline
+-(NSLayoutConstraint *)baselineToBaselineOfView:(UIView *)view;
+-(NSLayoutConstraint *)baselineToBaselineOfView:(UIView *)view offset:(CGFloat)offset;
+-(NSLayoutConstraint *)baselineToBaselineOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority;
+-(NSLayoutConstraint *)baselineToBaselineOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+
 @end
+
