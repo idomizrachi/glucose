@@ -79,55 +79,65 @@ typedef NS_ENUM(NSUInteger, IDMConstraintRelation) {
 #pragma mark - Leading to leading
 -(NSLayoutConstraint *)leadingToLeadingOfView:(UIView *)view;
 -(NSLayoutConstraint *)leadingToLeadingOfView:(UIView *)view offset:(CGFloat)offset;
--(NSLayoutConstraint *)leadingToLeadingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+-(NSLayoutConstraint *)leadingToLeadingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation;
+-(NSLayoutConstraint *)leadingToLeadingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority;
+-(NSLayoutConstraint *)leadingToLeadingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 
 #pragma mark - Leading to trailing
 -(NSLayoutConstraint *)leadingToTrailingOfView:(UIView *)view;
 -(NSLayoutConstraint *)leadingToTrailingOfView:(UIView *)view offset:(CGFloat)offset;
--(NSLayoutConstraint *)leadingToTrailingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority;
--(NSLayoutConstraint *)leadingToTrailingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+-(NSLayoutConstraint *)leadingToTrailingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation;
+-(NSLayoutConstraint *)leadingToTrailingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority;
+-(NSLayoutConstraint *)leadingToTrailingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 
 #pragma mark - Trailing to trailing
 -(NSLayoutConstraint *)trailingToTrailingOfView:(UIView *)view;
 -(NSLayoutConstraint *)trailingToTrailingOfView:(UIView *)view offset:(CGFloat)offset;
--(NSLayoutConstraint *)trailingToTrailingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority;
--(NSLayoutConstraint *)trailingToTrailingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+-(NSLayoutConstraint *)trailingToTrailingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation;
+-(NSLayoutConstraint *)trailingToTrailingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority;
+-(NSLayoutConstraint *)trailingToTrailingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 
 #pragma mark - Trailing to leading
 -(NSLayoutConstraint *)trailingToLeadingOfView:(UIView *)view;
 -(NSLayoutConstraint *)trailingToLeadingOfView:(UIView *)view offset:(CGFloat)offset;
--(NSLayoutConstraint *)trailingToLeadingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority;
--(NSLayoutConstraint *)trailingToLeadingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+-(NSLayoutConstraint *)trailingToLeadingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation;
+-(NSLayoutConstraint *)trailingToLeadingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority;
+-(NSLayoutConstraint *)trailingToLeadingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 
 #pragma mark - Top to top
 -(NSLayoutConstraint *)topToTopOfView:(UIView *)view;
 -(NSLayoutConstraint *)topToTopOfView:(UIView *)view offset:(CGFloat)offset;
--(NSLayoutConstraint *)topToTopOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority;
--(NSLayoutConstraint *)topToTopOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+-(NSLayoutConstraint *)topToTopOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation;
+-(NSLayoutConstraint *)topToTopOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority;
+-(NSLayoutConstraint *)topToTopOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 
 #pragma mark - Top to bottom
 -(NSLayoutConstraint *)topToBottomOfView:(UIView *)view;
 -(NSLayoutConstraint *)topToBottomOfView:(UIView *)view offset:(CGFloat)offset;
--(NSLayoutConstraint *)topToBottomOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority;
--(NSLayoutConstraint *)topToBottomOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+-(NSLayoutConstraint *)topToBottomOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation;
+-(NSLayoutConstraint *)topToBottomOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority;
+-(NSLayoutConstraint *)topToBottomOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 
 #pragma mark - Bottom to bottom
 -(NSLayoutConstraint *)bottomToBottomOfView:(UIView *)view;
 -(NSLayoutConstraint *)bottomToBottomOfView:(UIView *)view offset:(CGFloat)offset;
--(NSLayoutConstraint *)bottomToBottomOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority;
--(NSLayoutConstraint *)bottomToBottomOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+-(NSLayoutConstraint *)bottomToBottomOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation;
+-(NSLayoutConstraint *)bottomToBottomOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority;
+-(NSLayoutConstraint *)bottomToBottomOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 
 #pragma mark - Bottom to top
 -(NSLayoutConstraint *)bottomToTopOfView:(UIView *)view;
 -(NSLayoutConstraint *)bottomToTopOfView:(UIView *)view offset:(CGFloat)offset;
--(NSLayoutConstraint *)bottomToTopOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority;
--(NSLayoutConstraint *)bottomToTopOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+-(NSLayoutConstraint *)bottomToTopOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation;
+-(NSLayoutConstraint *)bottomToTopOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority;
+-(NSLayoutConstraint *)bottomToTopOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 
 #pragma mark - Last Baseline to last baseline
 -(NSLayoutConstraint *)bottomBaselineToBottomBaselineOfView:(UIView *)view;
 -(NSLayoutConstraint *)bottomBaselineToBottomBaselineOfView:(UIView *)view offset:(CGFloat)offset;
--(NSLayoutConstraint *)bottomBaselineToBottomBaselineOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority;
--(NSLayoutConstraint *)bottomBaselineToBottomBaselineOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
+-(NSLayoutConstraint *)bottomBaselineToBottomBaselineOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation;
+-(NSLayoutConstraint *)bottomBaselineToBottomBaselineOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority;
+-(NSLayoutConstraint *)bottomBaselineToBottomBaselineOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive;
 
 @end
 

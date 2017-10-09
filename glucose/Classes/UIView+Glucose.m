@@ -284,11 +284,33 @@
     return [self leadingToLeadingOfView:view offset:0.0f];
 }
 -(NSLayoutConstraint *)leadingToLeadingOfView:(UIView *)view offset:(CGFloat)offset {
-    return [self leadingToLeadingOfView:view offset:offset priority:UILayoutPriorityRequired isActive:YES];
+    return [self leadingToLeadingOfView:view offset:offset relation: IDMConstraintRelationEqual];
 }
--(NSLayoutConstraint *)leadingToLeadingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
+-(NSLayoutConstraint *)leadingToLeadingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation {
+    return [self leadingToLeadingOfView:view offset:offset relation:relation priority:UILayoutPriorityRequired];
+}
+-(NSLayoutConstraint *)leadingToLeadingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority {
+    return [self leadingToLeadingOfView:view offset:offset relation:relation priority:priority isActive:YES];
+}
+-(NSLayoutConstraint *)leadingToLeadingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
     self.translatesAutoresizingMaskIntoConstraints = NO;
-    NSLayoutConstraint *constraint = [self.leadingAnchor constraintEqualToAnchor:view.leadingAnchor constant:offset];
+    NSLayoutConstraint *constraint;
+    switch (relation) {
+        case IDMConstraintRelationEqual: {
+            constraint = [self.leadingAnchor constraintEqualToAnchor:view.leadingAnchor constant:offset];
+            break;
+        }
+        case IDMConstraintRelationEqualOrLess: {
+            constraint = [self.leadingAnchor constraintLessThanOrEqualToAnchor:view.leadingAnchor constant:offset];
+            break;
+        }
+        case IDMConstraintRelationEqualOrGreater: {
+            constraint = [self.leadingAnchor constraintGreaterThanOrEqualToAnchor:view.leadingAnchor constant:offset];
+            break;
+        }
+        default:
+            break;
+    }
     [self.class updateConstraint:constraint priority:priority isActive:isActive];
     return constraint;
 }
@@ -298,14 +320,33 @@
     return [self leadingToTrailingOfView:view offset:0.0f];
 }
 -(NSLayoutConstraint *)leadingToTrailingOfView:(UIView *)view offset:(CGFloat)offset {
-    return [self leadingToTrailingOfView:view offset:offset priority:UILayoutPriorityRequired isActive:YES];
+    return [self leadingToTrailingOfView:view offset:offset relation:IDMConstraintRelationEqual];
 }
--(NSLayoutConstraint *)leadingToTrailingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority {
-    return [self leadingToTrailingOfView:view offset:offset priority:priority isActive:YES];
+-(NSLayoutConstraint *)leadingToTrailingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation {
+    return [self leadingToTrailingOfView:view offset:offset relation:relation priority:UILayoutPriorityRequired];
 }
--(NSLayoutConstraint *)leadingToTrailingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
+-(NSLayoutConstraint *)leadingToTrailingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority {
+    return [self leadingToTrailingOfView:view offset:offset relation:relation priority:priority isActive:YES];
+}
+-(NSLayoutConstraint *)leadingToTrailingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
     self.translatesAutoresizingMaskIntoConstraints = NO;
-    NSLayoutConstraint *constraint = [self.leadingAnchor constraintEqualToAnchor:view.trailingAnchor constant:offset];
+    NSLayoutConstraint *constraint;
+    switch (relation) {
+        case IDMConstraintRelationEqual: {
+            constraint = [self.leadingAnchor constraintEqualToAnchor:view.trailingAnchor constant:offset];
+            break;
+        }
+        case IDMConstraintRelationEqualOrLess: {
+            constraint = [self.leadingAnchor constraintLessThanOrEqualToAnchor:view.trailingAnchor constant:offset];
+            break;
+        }
+        case IDMConstraintRelationEqualOrGreater: {
+            constraint = [self.leadingAnchor constraintGreaterThanOrEqualToAnchor:view.trailingAnchor constant:offset];
+            break;
+        }
+        default:
+            break;
+    }
     [self.class updateConstraint:constraint priority:priority isActive:isActive];
     return constraint;
 }
@@ -316,14 +357,33 @@
     return [self trailingToTrailingOfView:view offset:0.0f];
 }
 -(NSLayoutConstraint *)trailingToTrailingOfView:(UIView *)view offset:(CGFloat)offset {
-    return [self trailingToTrailingOfView:view offset:offset priority:UILayoutPriorityRequired];
+    return [self trailingToTrailingOfView:view offset:offset relation: IDMConstraintRelationEqual];
 }
--(NSLayoutConstraint *)trailingToTrailingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority {
-    return [self trailingToTrailingOfView:view offset:offset priority:priority isActive:YES];
+-(NSLayoutConstraint *)trailingToTrailingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation {
+    return [self trailingToTrailingOfView:view offset:offset relation:relation priority: UILayoutPriorityRequired];
 }
--(NSLayoutConstraint *)trailingToTrailingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
+-(NSLayoutConstraint *)trailingToTrailingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority {
+    return [self trailingToTrailingOfView:view offset:offset relation:relation priority:priority isActive:YES];
+}
+-(NSLayoutConstraint *)trailingToTrailingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
     self.translatesAutoresizingMaskIntoConstraints = NO;
-    NSLayoutConstraint *constraint = [self.trailingAnchor constraintEqualToAnchor:view.trailingAnchor constant:-offset];
+    NSLayoutConstraint *constraint;
+    switch (relation) {
+        case IDMConstraintRelationEqual: {
+            constraint = [self.trailingAnchor constraintEqualToAnchor:view.trailingAnchor constant:-offset];
+            break;
+        }
+        case IDMConstraintRelationEqualOrLess: {
+            constraint = [self.trailingAnchor constraintLessThanOrEqualToAnchor:view.trailingAnchor constant:-offset];
+            break;
+        }
+        case IDMConstraintRelationEqualOrGreater: {
+            constraint = [self.trailingAnchor constraintGreaterThanOrEqualToAnchor:view.trailingAnchor constant:-offset];
+            break;
+        }
+        default:
+            break;
+    }
     [self.class updateConstraint:constraint priority:priority isActive:isActive];
     return constraint;
 }
@@ -334,14 +394,33 @@
     return [self trailingToLeadingOfView:view offset:0.0f];
 }
 -(NSLayoutConstraint *)trailingToLeadingOfView:(UIView *)view offset:(CGFloat)offset {
-    return [self trailingToLeadingOfView:view offset:offset priority:UILayoutPriorityRequired];
+    return [self trailingToLeadingOfView:view offset:offset relation: IDMConstraintRelationEqual];
 }
--(NSLayoutConstraint *)trailingToLeadingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority {
-    return [self trailingToLeadingOfView:view offset:offset priority:priority isActive:YES];
+-(NSLayoutConstraint *)trailingToLeadingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation {
+    return [self trailingToLeadingOfView: view offset: offset relation:relation priority:UILayoutPriorityRequired];
 }
--(NSLayoutConstraint *)trailingToLeadingOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
+-(NSLayoutConstraint *)trailingToLeadingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority {
+    return [self trailingToLeadingOfView:view offset:offset relation: relation priority:priority isActive:YES];
+}
+-(NSLayoutConstraint *)trailingToLeadingOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
     self.translatesAutoresizingMaskIntoConstraints = NO;
-    NSLayoutConstraint *constraint = [self.trailingAnchor constraintEqualToAnchor:view.leadingAnchor constant:-offset];
+    NSLayoutConstraint *constraint;
+    switch (relation) {
+        case IDMConstraintRelationEqual: {
+            constraint = [self.trailingAnchor constraintEqualToAnchor:view.leadingAnchor constant:-offset];
+            break;
+        }
+        case IDMConstraintRelationEqualOrLess: {
+            constraint = [self.trailingAnchor constraintLessThanOrEqualToAnchor:view.leadingAnchor constant:-offset];
+            break;
+        }
+        case IDMConstraintRelationEqualOrGreater: {
+            constraint = [self.trailingAnchor constraintGreaterThanOrEqualToAnchor:view.leadingAnchor constant:-offset];
+            break;
+        }
+        default:
+            break;
+    }
     [self.class updateConstraint:constraint priority:priority isActive:isActive];
     return constraint;
 }
@@ -352,32 +431,69 @@
     return [self topToTopOfView:view offset:0.0f];
 }
 -(NSLayoutConstraint *)topToTopOfView:(UIView *)view offset:(CGFloat)offset {
-    return [self topToTopOfView:view offset:offset priority:UILayoutPriorityRequired];
+    return [self topToTopOfView:view offset:offset relation:IDMConstraintRelationEqual];
 }
--(NSLayoutConstraint *)topToTopOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority {
-    return [self topToTopOfView:view offset:offset priority:priority isActive:YES];
+-(NSLayoutConstraint *)topToTopOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation {
+    return [self topToTopOfView:view offset:offset relation:relation priority:UILayoutPriorityRequired];
 }
--(NSLayoutConstraint *)topToTopOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
+-(NSLayoutConstraint *)topToTopOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority {
+    return [self topToTopOfView:view offset:offset relation:relation priority:priority isActive:YES];
+}
+-(NSLayoutConstraint *)topToTopOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
     self.translatesAutoresizingMaskIntoConstraints = NO;
-    NSLayoutConstraint *constraint = [self.topAnchor constraintEqualToAnchor:view.topAnchor constant:offset];
+    NSLayoutConstraint *constraint;
+    switch (relation) {
+        case IDMConstraintRelationEqual: {
+            constraint = [self.topAnchor constraintEqualToAnchor:view.topAnchor constant:offset];
+            break;
+        }
+        case IDMConstraintRelationEqualOrLess: {
+            constraint = [self.topAnchor constraintLessThanOrEqualToAnchor:view.topAnchor constant:offset];
+            break;
+        }
+        case IDMConstraintRelationEqualOrGreater: {
+            constraint = [self.topAnchor constraintGreaterThanOrEqualToAnchor:view.topAnchor constant:offset];
+            break;
+        }
+        default:
+            break;
+    }
     [self.class updateConstraint:constraint priority:priority isActive:isActive];
     return constraint;
 }
-
 
 #pragma mark - Top to bottom
 -(NSLayoutConstraint *)topToBottomOfView:(UIView *)view {
     return [self topToBottomOfView:view offset:0.0f];
 }
 -(NSLayoutConstraint *)topToBottomOfView:(UIView *)view offset:(CGFloat)offset {
-    return [self topToBottomOfView:view offset:offset priority:UILayoutPriorityRequired];
+    return [self topToBottomOfView:view offset:offset relation:IDMConstraintRelationEqual];
 }
--(NSLayoutConstraint *)topToBottomOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority{
-    return [self topToBottomOfView:view offset:offset priority:priority isActive:YES];
+-(NSLayoutConstraint *)topToBottomOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation {
+    return [self topToBottomOfView:view offset:offset relation:relation priority:UILayoutPriorityRequired];
 }
--(NSLayoutConstraint *)topToBottomOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
+-(NSLayoutConstraint *)topToBottomOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority{
+    return [self topToBottomOfView:view offset:offset relation:relation priority:priority isActive:YES];
+}
+-(NSLayoutConstraint *)topToBottomOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
     self.translatesAutoresizingMaskIntoConstraints = NO;
-    NSLayoutConstraint *constraint = [self.topAnchor constraintEqualToAnchor:view.bottomAnchor constant:offset];
+    NSLayoutConstraint *constraint;
+    switch (relation) {
+        case IDMConstraintRelationEqual: {
+            constraint = [self.topAnchor constraintEqualToAnchor:view.bottomAnchor constant:offset];
+            break;
+        }
+        case IDMConstraintRelationEqualOrLess: {
+            constraint = [self.topAnchor constraintLessThanOrEqualToAnchor:view.bottomAnchor constant:offset];
+            break;
+        }
+        case IDMConstraintRelationEqualOrGreater: {
+            constraint = [self.topAnchor constraintGreaterThanOrEqualToAnchor:view.bottomAnchor constant:offset];
+            break;
+        }
+        default:
+            break;
+    }
     [self.class updateConstraint:constraint priority:priority isActive:isActive];
     return constraint;
 }
@@ -387,14 +503,33 @@
     return [self bottomToBottomOfView:view offset:0.0f];
 }
 -(NSLayoutConstraint *)bottomToBottomOfView:(UIView *)view offset:(CGFloat)offset {
-    return [self bottomToBottomOfView:view offset:offset priority:UILayoutPriorityRequired];
+    return [self bottomToBottomOfView:view offset:offset relation:IDMConstraintRelationEqual];
 }
--(NSLayoutConstraint *)bottomToBottomOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority {
-    return [self bottomToBottomOfView:view offset:offset priority:priority isActive:YES];
+-(NSLayoutConstraint *)bottomToBottomOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation {
+    return [self bottomToBottomOfView:view offset:offset relation:relation priority:UILayoutPriorityRequired];
 }
--(NSLayoutConstraint *)bottomToBottomOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
+-(NSLayoutConstraint *)bottomToBottomOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority {
+    return [self bottomToBottomOfView:view offset:offset relation:relation priority:priority isActive:YES];
+}
+-(NSLayoutConstraint *)bottomToBottomOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
     self.translatesAutoresizingMaskIntoConstraints = NO;
-    NSLayoutConstraint *constraint = [self.bottomAnchor constraintEqualToAnchor:view.bottomAnchor constant:-offset];
+    NSLayoutConstraint *constraint;
+    switch (relation) {
+        case IDMConstraintRelationEqual: {
+            constraint = [self.bottomAnchor constraintEqualToAnchor:view.bottomAnchor constant:-offset];
+            break;
+        }
+        case IDMConstraintRelationEqualOrLess: {
+            constraint = [self.bottomAnchor constraintLessThanOrEqualToAnchor:view.bottomAnchor constant:-offset];
+            break;
+        }
+        case IDMConstraintRelationEqualOrGreater: {
+            constraint = [self.bottomAnchor constraintGreaterThanOrEqualToAnchor:view.bottomAnchor constant:-offset];
+            break;
+        }
+        default:
+            break;
+    }
     [self.class updateConstraint:constraint priority:priority isActive:isActive];
     return constraint;
 }
@@ -404,14 +539,33 @@
     return [self bottomToTopOfView:view offset:0.0f];
 }
 -(NSLayoutConstraint *)bottomToTopOfView:(UIView *)view offset:(CGFloat)offset {
-    return [self bottomToTopOfView:view offset:offset priority:UILayoutPriorityRequired];
+    return [self bottomToTopOfView:view offset:offset relation:IDMConstraintRelationEqual];
 }
--(NSLayoutConstraint *)bottomToTopOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority {
-    return [self bottomToTopOfView:view offset:offset priority:priority isActive:YES];
+-(NSLayoutConstraint *)bottomToTopOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation {
+    return [self bottomToTopOfView:view offset:offset relation:relation priority:UILayoutPriorityRequired];
 }
--(NSLayoutConstraint *)bottomToTopOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
+-(NSLayoutConstraint *)bottomToTopOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority {
+    return [self bottomToTopOfView:view offset:offset relation:relation priority:priority isActive:YES];
+}
+-(NSLayoutConstraint *)bottomToTopOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
     self.translatesAutoresizingMaskIntoConstraints = NO;
-    NSLayoutConstraint *constraint = [self.bottomAnchor constraintEqualToAnchor:view.topAnchor constant:-offset];
+    NSLayoutConstraint *constraint;
+    switch (relation) {
+        case IDMConstraintRelationEqual: {
+            constraint = [self.bottomAnchor constraintEqualToAnchor:view.topAnchor constant:-offset];
+            break;
+        }
+        case IDMConstraintRelationEqualOrLess: {
+            constraint = [self.bottomAnchor constraintLessThanOrEqualToAnchor:view.topAnchor constant:-offset];
+            break;
+        }
+        case IDMConstraintRelationEqualOrGreater: {
+            constraint = [self.bottomAnchor constraintGreaterThanOrEqualToAnchor:view.topAnchor constant:-offset];
+            break;
+        }
+        default:
+            break;
+    }
     [self.class updateConstraint:constraint priority:priority isActive:isActive];
     return constraint;
 }
@@ -421,14 +575,33 @@
     return [self bottomBaselineToBottomBaselineOfView:view offset:0.0f];
 }
 -(NSLayoutConstraint *)bottomBaselineToBottomBaselineOfView:(UIView *)view offset:(CGFloat)offset {
-    return [self bottomBaselineToBottomBaselineOfView:view offset:offset priority:UILayoutPriorityRequired];
+    return [self bottomBaselineToBottomBaselineOfView:view offset:offset relation:IDMConstraintRelationEqual];
 }
--(NSLayoutConstraint *)bottomBaselineToBottomBaselineOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority {
-    return [self bottomBaselineToBottomBaselineOfView:view offset:offset priority:priority isActive:YES];
+-(NSLayoutConstraint *)bottomBaselineToBottomBaselineOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation {
+    return [self bottomBaselineToBottomBaselineOfView:view offset:offset relation:relation priority:UILayoutPriorityRequired];
 }
--(NSLayoutConstraint *)bottomBaselineToBottomBaselineOfView:(UIView *)view offset:(CGFloat)offset priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
+-(NSLayoutConstraint *)bottomBaselineToBottomBaselineOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority {
+    return [self bottomBaselineToBottomBaselineOfView:view offset:offset relation:relation priority:priority isActive:YES];
+}
+-(NSLayoutConstraint *)bottomBaselineToBottomBaselineOfView:(UIView *)view offset:(CGFloat)offset relation:(IDMConstraintRelation)relation priority:(UILayoutPriority)priority isActive:(BOOL)isActive {
     self.translatesAutoresizingMaskIntoConstraints = NO;
-    NSLayoutConstraint *constraint = [self.lastBaselineAnchor constraintEqualToAnchor:view.lastBaselineAnchor constant:-offset];
+    NSLayoutConstraint *constraint;
+    switch (relation) {
+        case IDMConstraintRelationEqual: {
+            constraint = [self.lastBaselineAnchor constraintEqualToAnchor:view.lastBaselineAnchor constant:-offset];
+            break;
+        }
+        case IDMConstraintRelationEqualOrLess: {
+            constraint = [self.lastBaselineAnchor constraintLessThanOrEqualToAnchor:view.lastBaselineAnchor constant:-offset];
+            break;
+        }
+        case IDMConstraintRelationEqualOrGreater: {
+            constraint = [self.lastBaselineAnchor constraintGreaterThanOrEqualToAnchor:view.lastBaselineAnchor constant:-offset];
+            break;
+        }
+        default:
+            break;
+    }
     [self.class updateConstraint:constraint priority:priority isActive:isActive];
     return constraint;
 }
