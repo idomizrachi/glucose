@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'glucose'
-  s.version          = '0.0.7'
+  s.version          = '0.0.8'
   s.summary          = 'Glucose - Autolayout syntactic sugar'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ The implementation was highly inspired by TinyConstraints.
   s.source           = { :git => 'https://github.com/idomizrachi/glucose.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/idomizrachi'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'glucose/Classes/**/*'
   s.frameworks = 'UIKit'
